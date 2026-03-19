@@ -8,6 +8,8 @@ const tasks = [
 
 const app = express();
 
+app.use(express.json());
+
 app.get("/api/v1/tasks", (req, res) => {
   console.log("this is a task app");
   res.json({
