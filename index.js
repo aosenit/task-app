@@ -2,9 +2,14 @@ import express from "express";
 
 const app = express();
 
-app.get("/", (req, res) => {
+app.get("/api/v1/tasks", (req, res) => {
   console.log("this is a task app");
-  res.send("this is a task app");
+  res.json({
+    message: "this is a task app",
+    data: {
+      tasks: [],
+    },
+  });
 });
 
 app.listen(3000, () => {
